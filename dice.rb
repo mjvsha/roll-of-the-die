@@ -12,3 +12,4 @@ end
 
 
 puts "You rolled #{dice.first} and #{dice.last}."
+puts "Your total is #{dice.first + dice.last}"
