@@ -22,7 +22,14 @@ end
 
 puts "There are #{counter} permutations."
 
+total_array.sort!
 puts total_array
+
+#define a method where you would get a counter variable
+#lopop through array
+
+
+
 
 
 total_times = {
@@ -42,7 +49,33 @@ total_times = {
 
 
 
+
+
+=begin
+GET THIS CHECKED OUT
+
+total_array.each do |num|
+  total_times.each do |key, value|
+    if num == total_times[key]
+      value +=1
+      p num
+      p key
+      end
+  end
+end
+
+
 puts total_times
+
+
+puts total_times
+
+
+
+
+=end
+
+
 
 #threw all the totals into an array
 #now im gonna go thrrough the array and pick out the totals that i want
@@ -54,12 +87,11 @@ puts total_times
 #update the values with how many times it occurs
 
 total_array.each do |num|
+
   if num == 2
     total_times[2] += 1
-
   elsif num ==3
     total_times[3] += 1
-
   elsif num ==4
     total_times[4] += 1
   elsif num ==5
@@ -81,7 +113,36 @@ total_array.each do |num|
   end
 end
 
+puts total_times
+#the trouble with this is that what if there were more than 12??
+total_times.each do |key, value|
+  puts "#{key} occurs #{value} times."
+end
+
+
+=begin
+def give_me_totals(key, value)
+
+
+
+
+
+end
+
+
+total_array.each do |num|
+  total_times.each do |num2|
+    if num == num2
+      total_times[num2] +=1
+    end
+  end
+end
+
 #THERE HAS GOT TO BE A MORE ELEGANT WAY TO DO THIS!!!
 #THIS LOOKS SO AMATEUR !!!!
 
+
+
   puts total_times
+
+=end
